@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCQ Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .quiz-container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+        }
+        .question {
+            margin-bottom: 15px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 15px;
+            background: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <h2>MCQ Quiz</h2>
+        <form id="quizForm">
+  <!-- Question 1 -->
+  <div class="question">
+    <p>1. Which of the following medical factors do not influence an underwriter's decision</p>
+    <input type="radio" name="q1" value="a"> a) Family history<br>
+    <input type="radio" name="q1" value="b"> b) Personal characteristic<br>
+    <input type="radio" name="q1" value="c"> c) Spouse's History<br>
+    <input type="radio" name="q1" value="d"> d) Personal History<br>
+  </div>
+
+  <!-- Question 2 -->
+  <div class="question">
+    <p>2. Cardio vascular disease refers to the disease which affect</p>
+    <input type="radio" name="q2" value="a"> a) Heart and circulatory system (Blood)<br>
+    <input type="radio" name="q2" value="b"> b) Lungs and respiratory system<br>
+    <input type="radio" name="q2" value="c"> c) Kidney and excretory system<br>
+    <input type="radio" name="q2" value="d"> d) Stomach, intestine and digestive system<br>
+  </div>
+
+  <!-- Question 3 -->
+  <div class="question">
+    <p>3. Why is heredity history of importance in medical underwriting?</p>
+    <input type="radio" name="q3" value="a"> a) Rich parents have healthy kids<br>
+    <input type="radio" name="q3" value="b"> b) Certain diseases can be passed on from parents to children<br>
+    <input type="radio" name="q3" value="c"> c) Poor parents have malnourished kids<br>
+    <input type="radio" name="q3" value="d"> d) Family environment is a critical factor<br>
+  </div>
+
+  <!-- Question 4 -->
+  <div class="question">
+    <p>4. Which of the following is not an underwriting decision?</p>
+    <input type="radio" name="q4" value="a"> a) Risk acceptance at standard rates<br>
+    <input type="radio" name="q4" value="b"> b) Declinature of risk<br>
+    <input type="radio" name="q4" value="c"> c) Postponement of risk<br>
+    <input type="radio" name="q4" value="d"> d) Claim rejection<br>
+  </div>
+
+  <!-- Question 5 -->
+  <div class="question">
+    <p>5. Which of the following is not a standard age proof?</p>
+    <input type="radio" name="q5" value="a"> a) Passport<br>
+    <input type="radio" name="q5" value="b"> b) School leaving certificate<br>
+    <input type="radio" name="q5" value="c"> c) Horoscope<br>
+    <input type="radio" name="q5" value="d"> d) Birth certificate<br>
+  </div>
+
+  <!-- Question 6 -->
+  <div class="question">
+    <p>6. Health insurance is based on the concept of</p>
+    <input type="radio" name="q6" value="a"> a) Mortality<br>
+    <input type="radio" name="q6" value="b"> b) Risk<br>
+    <input type="radio" name="q6" value="c"> c) Morbidity<br>
+    <input type="radio" name="q6" value="d"> d) Personal history<br>
+  </div>
+
+  <!-- Question 7 -->
+  <div class="question">
+    <p>7. Important factor for health insurance underwriting is</p>
+    <input type="radio" name="q7" value="a"> a) Age<br>
+    <input type="radio" name="q7" value="b"> b) Gender<br>
+    <input type="radio" name="q7" value="c"> c) Habits<br>
+    <input type="radio" name="q7" value="d"> d) All of the above<br>
+  </div>
+
+  <!-- Question 8 -->
+  <div class="question">
+    <p>8. Underwriting is the process of______________</p>
+    <input type="radio" name="q8" value="a"> a) Marketing<br>
+    <input type="radio" name="q8" value="b"> b) Collecting premium from customers<br>
+    <input type="radio" name="q8" value="c"> c) Selling various insurance products<br>
+    <input type="radio" name="q8" value="d"> d) Risk selection and risk pricing<br>
+  </div>
+
+  <!-- Question 9 -->
+  <div class="question">
+    <p>9. Purpose of underwriting is</p>
+    <input type="radio" name="q9" value="a"> a) Prevent anti-selection<br>
+    <input type="radio" name="q9" value="b"> b) To classify risks and ensure equity among risk<br>
+    <input type="radio" name="q9" value="c"> c) Both are correct<br>
+    <input type="radio" name="q9" value="d"> d) Both are correct<br>
+  </div>
+
+  <!-- Question 10 -->
+  <div class="question">
+    <p>10. The deliberate intention of taking insurance just to collect a claim is part of</p>
+    <input type="radio" name="q10" value="a"> a) Physical hazard<br>
+    <input type="radio" name="q10" value="b"> b) Moral hazard<br>
+    <input type="radio" name="q10" value="c"> c) Occupation hazard<br>
+    <input type="radio" name="q10" value="d"> d) Fraud<br>
+  </div>
+
+  <!-- Question 11 -->
+  <div class="question">
+    <p>11. The insurer should follow FILE & USE guidelines at the time of</p>
+    <input type="radio" name="q11" value="a"> a) Introducing a product<br>
+    <input type="radio" name="q11" value="b"> b) Modification of product<br>
+    <input type="radio" name="q11" value="c"> c) Withdrawal of a product<br>
+    <input type="radio" name="q11" value="d"> d) All of the above<br>
+  </div>
+
+  <!-- Question 12 -->
+  <div class="question">
+    <p>12. FILE & USE guidelines are issued by</p>
+    <input type="radio" name="q12" value="a"> a) IRDAI<br>
+    <input type="radio" name="q12" value="b"> b) Insurer<br>
+    <input type="radio" name="q12" value="c"> c) Policy holder<br>
+    <input type="radio" name="q12" value="d"> d) None of the above<br>
+  </div>
+
+  <!-- Question 13 -->
+  <div class="question">
+    <p>13. Portability can be opted at the time of_____________</p>
+    <input type="radio" name="q13" value="a"> a) Inception<br>
+    <input type="radio" name="q13" value="b"> b) Renewal<br>
+    <input type="radio" name="q13" value="c"> c) Surrender<br>
+    <input type="radio" name="q13" value="d"> d) Maturity<br>
+  </div>
+
+  <!-- Question 14 -->
+  <div class="question">
+    <p>14. Find out the correct statement</p>
+    <input type="radio" name="q14" value="a"> a) Insurers are charging loading for Porting<br>
+    <input type="radio" name="q14" value="b"> b) Insurers are charging loading for Porting<br>
+    <input type="radio" name="q14" value="c"> c) Both are correct<br>
+    <input type="radio" name="q14" value="d"> d) Both are wrong<br>
+  </div>
+
+  <!-- Question 15 -->
+  <div class="question">
+    <p>15. Basic principles for Underwriting are _________</p>
+    <input type="radio" name="q15" value="a"> a) Utmost good faith<br>
+    <input type="radio" name="q15" value="b"> b) Insurable interest<br>
+    <input type="radio" name="q15" value="c"> c) Both are wrong<br>
+    <input type="radio" name="q15" value="d"> d) Both are correct<br>
+  </div>
+
+  <!-- Question 16 -->
+  <div class="question">
+    <p>16. Standard age proofs are</p>
+    <input type="radio" name="q16" value="a"> a) School certificate<br>
+    <input type="radio" name="q16" value="b"> b) Passport<br>
+    <input type="radio" name="q16" value="c"> c) Domicile certificate<br>
+    <input type="radio" name="q16" value="d"> d) All of the above<br>
+  </div>
+
+  <!-- Question 17 -->
+  <div class="question">
+    <p>17. Financial documents required for</p>
+    <input type="radio" name="q17" value="a"> a) Personal accident covers<br>
+    <input type="radio" name="q17" value="b"> b) High sum assured coverage<br>
+    <input type="radio" name="q17" value="c"> c) Mismatch in income and occupation as compared to coverage<br>
+    <input type="radio" name="q17" value="d"> d) All of the above<br>
+  </div>
+
+  <!-- Question 18 -->
+  <div class="question">
+    <p>18. The principle of utmost good faith in underwriting is required to be followed by</p>
+    <input type="radio" name="q18" value="a"> a) The insurer<br>
+    <input type="radio" name="q18" value="b"> b) The insured<br>
+    <input type="radio" name="q18" value="c"> c) Both insurer and insured<br>
+    <input type="radio" name="q18" value="d"> d) Medical examiner<br>
+  </div>
+
+  <!-- Question 19 -->
+  <div class="question">
+    <p>19. Insurable interest refers to ______</p>
+    <input type="radio" name="q19" value="a"> a) Financial interest of a person in the asset to be insured<br>
+    <input type="radio" name="q19" value="b"> b) The asset which is insured<br>
+    <input type="radio" name="q19" value="c"> c) Each insurer's share of loss<br>
+    <input type="radio" name="q19" value="d"> d) The amount of loss covered by the insurer<br>
+  </div>
+
+  <!-- Question 20 -->
+  <div class="question">
+    <p>20. The underwriter classifies the risk into _________</p>
+    <input type="radio" name="q20" value="a"> a) Accept risk at standard rates<br>
+    <input type="radio" name="q20" value="b"> b) Accept risk at an extra premium<br>
+    <input type="radio" name="q20" value="c"> c) Decline the cover<br>
+    <input type="radio" name="q20" value="d"> d) All of the above<br>
+  </div>
+
+  <!-- Question 21 -->
+  <div class="question">
+    <p>21. State which statement is wrong</p>
+    <input type="radio" name="q21" value="a"> a) It involves high cost in collecting and assessing medical reports<br>
+    <input type="radio" name="q21" value="b"> b) Health status and age are key factors for medical underwriting<br>
+    <input type="radio" name="q21" value="c"> c) Medical examination is compulsory for health insurance<br>
+    <input type="radio" name="q21" value="d"> d) Percentage assessment is made for each component of risk<br>
+  </div>
+    <!-- Question 22 -->
+  <div class="question">
+    <p>22. Group insurance is underwritten mainly on the _____</p>
+    <input type="radio" name="q22" value="a"> a) Law of averages<br>
+    <input type="radio" name="q22" value="b"> b) Individual<br>
+    <input type="radio" name="q22" value="c"> c) Group<br>
+    <input type="radio" name="q22" value="d"> d) Insurer<br>
+  </div>
+
+  <!-- Question 23 -->
+  <div class="question">
+    <p>23. Traditional and common groups offered group health insurance are___________</p>
+    <input type="radio" name="q23" value="a"> a) Labour unions<br>
+    <input type="radio" name="q23" value="b"> b) Trusts<br>
+    <input type="radio" name="q23" value="c"> c) Employer-employee groups<br>
+    <input type="radio" name="q23" value="d"> d) Professional association<br>
+  </div>
+
+  <!-- Question 24 -->
+  <div class="question">
+    <p>24. The example for group health insurance schemes sponsored by government is</p>
+    <input type="radio" name="q24" value="a"> a) RSBY<br>
+    <input type="radio" name="q24" value="b"> b) Yeshaswini<br>
+    <input type="radio" name="q24" value="c"> c) Both are correct<br>
+    <input type="radio" name="q24" value="d"> d) Both are wrong<br>
+  </div>
+
+  <!-- Question 25 -->
+  <div class="question">
+    <p>25. State which statement is correct in case of Overseas travel insurance</p>
+    <input type="radio" name="q25" value="a"> a) Premium for Overseas travel insurance is depend on the age and the duration of foreign travel<br>
+    <input type="radio" name="q25" value="b"> b) Premium rates are high compared to domestic health insurance<br>
+    <input type="radio" name="q25" value="c"> c) Both are correct<br>
+    <input type="radio" name="q25" value="d"> d) Both are wrong<br>
+  </div>
+
+  <!-- Question 26 -->
+  <div class="question">
+    <p>26. The main factor for Personal accident insurance coverage is</p>
+    <input type="radio" name="q26" value="a"> a) Occupation<br>
+    <input type="radio" name="q26" value="b"> b) Family History<br>
+    <input type="radio" name="q26" value="c"> c) Personal history<br>
+    <input type="radio" name="q26" value="d"> d) Gender<br>
+  </div>
+
+  <!-- Question 27 -->
+  <div class="question">
+    <p>27. Person working in high voltage electricity is coming under__________</p>
+    <input type="radio" name="q27" value="a"> a) Risk group I (Normal)<br>
+    <input type="radio" name="q27" value="b"> b) Risk group II (Medium)<br>
+    <input type="radio" name="q27" value="c"> c) Risk group III (High)<br>
+    <input type="radio" name="q27" value="d"> d) None of the above<br>
+  </div>
+
+  <!-- Question 28 -->
+  <div class="question">
+    <p>28. State which statement is correct</p>
+    <input type="radio" name="q28" value="a"> a) Medical examination is compulsory for P.A insurance<br>
+    <input type="radio" name="q28" value="b"> b) War risk cover may be covered to Indian personnel working abroad<br>
+    <input type="radio" name="q28" value="c"> c) In PA insurance main factor considered for rating is Age<br>
+    <input type="radio" name="q28" value="d"> d) Drivers of truck and heavy vehicles, sportsmen are coming under RISK group I<br>
+  </div>
+
+  <!-- Question 29 -->
+  <div class="question">
+    <p>29. The proposal form contains</p>
+    <input type="radio" name="q29" value="a"> a) Personal details<br>
+    <input type="radio" name="q29" value="b"> b) Physical condition<br>
+    <input type="radio" name="q29" value="c"> c) Habits and pastimes<br>
+    <input type="radio" name="q29" value="d"> d) All of the above<br>
+  </div>
+
+  <!-- Question 30 -->
+  <div class="question">
+    <p>30. Group discount is available</p>
+    <input type="radio" name="q30" value="a"> a) Employer-employee groups<br>
+    <input type="radio" name="q30" value="b"> b) Members of registered co-operative society<br>
+    <input type="radio" name="q30" value="c"> c) Number of members exceeds 100<br>
+    <input type="radio" name="q30" value="d"> d) All of the above<br>
+  </div>
+
+  <!-- Question 31 -->
+  <div class="question">
+    <p>31. The principle of 'all or none' is applies in_______</p>
+    <input type="radio" name="q31" value="a"> a) Health insurance<br>
+    <input type="radio" name="q31" value="b"> b) Personal insurance<br>
+    <input type="radio" name="q31" value="c"> c) Group insurance<br>
+    <input type="radio" name="q31" value="d"> d) Life insurance<br>
+  </div>
+
+  <!-- Question 32 -->
+  <div class="question">
+    <p>32. 1. Group health insurance provides coverage only to employee groups<br>
+    2. In a group health insurance any of the individual constituting the group could anti select against the insurer</p>
+    <input type="radio" name="q32" value="a"> a) Statement 1 is true and statement 2 is false<br>
+    <input type="radio" name="q32" value="b"> b) Statement 2 is true and 1 is false<br>
+    <input type="radio" name="q32" value="c"> c) Statement 1 and 2 are true<br>
+    <input type="radio" name="q32" value="d"> d) Statement 1 and 2 are false<br>
+  </div>
+
+  <!-- Question 33 -->
+  <div class="question">
+    <p>33. Accepting the risk by more than one insurer is known as</p>
+    <input type="radio" name="q33" value="a"> a) Life insurance<br>
+    <input type="radio" name="q33" value="b"> b) Coinsurance<br>
+    <input type="radio" name="q33" value="c"> c) Reinsurance<br>
+    <input type="radio" name="q33" value="d"> d) Health insurance<br>
+  </div>
+
+  <!-- Question 34 -->
+  <div class="question">
+    <p>34. Reinsuring the risk with other insurance companies is known as __________</p>
+    <input type="radio" name="q34" value="a"> a) Reinsurance<br>
+    <input type="radio" name="q34" value="b"> b) Coinsurance<br>
+    <input type="radio" name="q34" value="c"> c) Group insurance<br>
+    <input type="radio" name="q34" value="d"> d) Life insurance<br>
+  </div>
+
+  <!-- Question 35 -->
+  <div class="question">
+    <p>35. Which of the following statements about medical underwriting is incorrect?</p>
+    <input type="radio" name="q35" value="a"> a) It involves high cost in collecting and assessing medical reports.<br>
+    <input type="radio" name="q35" value="b"> b) Current health status and age are the key factors in medical underwriting for health insurance.<br>
+    <input type="radio" name="q35" value="c"> c) Proposers have to undergo medical and pathological investigations to assess their health risk profile.<br>
+    <input type="radio" name="q35" value="d"> d) Percentage assessment is made on each component of the risk<br>
+  </div>
+
+  <!-- Question 36 -->
+  <div class="question">
+    <p>36. Which of the following factor does not affect the morbidity of an individual?</p>
+    <input type="radio" name="q36" value="a"> a) Gender<br>
+    <input type="radio" name="q36" value="b"> b) Spouse job<br>
+    <input type="radio" name="q36" value="c"> c) Habits<br>
+    <input type="radio" name="q36" value="d"> d) Residence location<br>
+  </div>
+
+  <!-- Question 37 -->
+  <div class="question">
+    <p>37. According to the principle of indemnity, the insured is paid for __________.</p>
+    <input type="radio" name="q37" value="a"> a) The actual losses to the extent of the sum insured<br>
+    <input type="radio" name="q37" value="b"> b) The sum insured irrespective of the amount actually spent<br>
+    <input type="radio" name="q37" value="c"> c) A fixed amount agreed between both the parties<br>
+    <input type="radio" name="q37" value="d"> d) The actual losses irrespective of the sum assured<br>
+  </div>
+
+  <!-- Question 38 -->
+  <div class="question">
+    <p>38. The first and the primary source of information about an applicant, for the underwriter is his</p>
+    <input type="radio" name="q38" value="a"> a) Age proof documents<br>
+    <input type="radio" name="q38" value="b"> b) Financial documents<br>
+    <input type="radio" name="q38" value="c"> c) Previous medical records<br>
+    <input type="radio" name="q38" value="d"> d) Proposal form<br>
+  </div>
+
+  <!-- Question 39 -->
+  <div class="question">
+    <p>39. The underwriting process is completed when ___________________.</p>
+    <input type="radio" name="q39" value="a"> a) All the critical information related to the health and personal details of the proposer are collected through the proposal form<br>
+    <input type="radio" name="q39" value="b"> b) All the medical examinations and tests of the proposer are completed<br>
+    <input type="radio" name="q39" value="c"> c) The received information is carefully assessed and classified into appropriate risk categories<br>
+    <input type="radio" name="q39" value="d"> d) The policy is issued to the proposer after risk selection and pricing.<br>
+  </div>
+
+  <!-- Question 40 -->
+  <div class="question">
+    <p>40. Which of the following statements about the numerical rating method is incorrect?</p>
+    <input type="radio" name="q40" value="a"> a) Numerical rating method provides greater speed in the handling of a large business with the help of trained personnel.<br>
+    <input type="radio" name="q40" value="b"> b) Analysis of difficult or doubtful cases is not possible on the basis of numerical points without medical referees or experts.<br>
+    <input type="radio" name="q40" value="c"> c) This method can be used by persons without any specific knowledge of medical science.<br>
+    <input type="radio" name="q40" value="d"> d) It ensures consistency between the decisions of different underwriters.<br>
+  </div>
+
+                       <button type="button">Submit</button>
+        </form>
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+        function checkAnswers() {
+            let score = 0;
+            let answers = {
+                q1: 'b',
+                q2: 'c',
+                q3: 'b',
+                q4: 'c',
+                q5: 'b',
+                q6: 'c',
+                q7: 'b',
+                q8: 'c',
+                q9: 'b',
+                q10: 'c',
+                q11: 'b',
+                q12: 'c',
+                q13: 'b',
+                q14: 'c',
+                q15: 'b'
+            };
+            let totalQuestions = Object.keys(answers).length;
+            for (let key in answers) {
+                let selectedOption = document.querySelector(`input[name="${key}"]:checked`);
+                if (selectedOption && selectedOption.value === answers[key]) {
+                    score++;
+                }
+            }
+            document.getElementById("result").innerText = `You scored ${score} out of ${totalQuestions}`;
+        }
+    </script>
+</body>
+</html>

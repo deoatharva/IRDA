@@ -1,0 +1,39 @@
+<Doctype html>
+<html>
+<head>
+<title></title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$("#btn1").click(function(){
+$("#test").fadeIn();
+});
+$("#btn2").click(function(){
+$("#test").fadeOut();
+});
+$("#btn3").click(function(){
+$("#test").fadeToggle();
+});
+$("#btn4").click(function(){
+$("#tet").slideUp();
+});
+$("#btn5").click(function(){
+$("#tet").slideDown();
+});
+$("#btn6").click(function(){
+$("#tet").slideToggle();
+});
+});
+</script>
+</head>
+<body>
+<button id="btn1" >fadein</button>
+<button id="btn2" >fadeout</button>
+<button id="btn3" >fadetoggle</button>
+<p id="test" style="display-none">Fade Operations</p>
+<button id="btn4" >slideup</button>
+<button id="btn5" >slidesdown</button>
+<button id="btn6" >slidetoggle</button>
+<p id="tet" style="display-none">Slide Operations</p>
+</body>
+</html>

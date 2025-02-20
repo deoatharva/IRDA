@@ -1,0 +1,18 @@
+<Doctype html>
+<html>
+<head>
+<title></title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$("#btn1").click(function(){
+$("#test").animate({left: '500px'}).slideUp(300);	
+});
+});
+</script>
+</head>
+<body>
+<button id="btn1">animate</button>
+<p id="test" style="position:absolute">jquery basic</p>
+</body>
+</html>

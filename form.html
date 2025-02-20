@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCQ Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .quiz-container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+        }
+        .question {
+            margin-bottom: 15px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 15px;
+            background: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <h2>MCQ Quiz</h2>
+        <form id="quizForm">
+
+                       <button type="button">Submit</button>
+        </form>
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+        function checkAnswers() {
+            let score = 0;
+            let answers = {
+                q1: 'b',
+                q2: 'c',
+                q3: 'b',
+                q4: 'c',
+                q5: 'b',
+                q6: 'c',
+                q7: 'b',
+                q8: 'c',
+                q9: 'b',
+                q10: 'c',
+                q11: 'b',
+                q12: 'c',
+                q13: 'b',
+                q14: 'c',
+                q15: 'b'
+            };
+            let totalQuestions = Object.keys(answers).length;
+            for (let key in answers) {
+                let selectedOption = document.querySelector(`input[name="${key}"]:checked`);
+                if (selectedOption && selectedOption.value === answers[key]) {
+                    score++;
+                }
+            }
+            document.getElementById("result").innerText = `You scored ${score} out of ${totalQuestions}`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<Doctype html>
+<html>
+<head>
+<title></title>
+<script src="https://ajax.google.com/apis/libs/jquery/3.7.1/jquery.main.js"></script>
+<script>
+$(documnet).ready(function(){
+	$("#test").css({"font-size":25,"text-align":"center","font-style":"italic"});
+});
+</script>
+</head>
+<body>
+<p id="test">jquery basic</p>
+</body>
+</html>

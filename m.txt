@@ -1,0 +1,685 @@
+Microsoft Windows [Version 10.0.19045.5011]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Admin>cd AppData\Local\mongodb
+
+C:\Users\Admin\AppData\Local\mongodb>mongosh
+Current Mongosh Log ID: 671863aaf30e6a60ecc73bf7
+Connecting to:          mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.3.1
+Using MongoDB:          8.0.0
+Using Mongosh:          2.3.1
+mongosh 2.3.2 is available for download: https://www.mongodb.com/try/download/shell
+
+For mongosh info see: https://www.mongodb.com/docs/mongodb-shell/
+
+------
+   The server generated these startup warnings when booting
+   2024-10-22T06:36:02.824+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+------
+
+test> show dbs
+Naruto    8.00 KiB
+SIWS     24.00 KiB
+admin    40.00 KiB
+config   48.00 KiB
+local    88.00 KiB
+test    128.00 KiB
+tyit     96.00 KiB
+test> use exam
+switched to db exam
+exam> db.dropDatabase()
+{ ok: 1, dropped: 'exam' }
+exam> show dbs
+Naruto    8.00 KiB
+SIWS     24.00 KiB
+admin    40.00 KiB
+config   48.00 KiB
+local    88.00 KiB
+test    128.00 KiB
+tyit     96.00 KiB
+exam> use exam
+already on db exam
+exam> show dbs
+Naruto    8.00 KiB
+SIWS     24.00 KiB
+admin    40.00 KiB
+config   48.00 KiB
+local    88.00 KiB
+test    128.00 KiB
+tyit     96.00 KiB
+exam> use SIWS
+switched to db SIWS
+SIWS> show dbs
+Naruto    8.00 KiB
+SIWS     24.00 KiB
+admin    40.00 KiB
+config   48.00 KiB
+local    88.00 KiB
+test    128.00 KiB
+tyit     96.00 KiB
+SIWS> use exam
+switched to db exam
+exam> db.createCollection(mon)
+ReferenceError: mon is not defined
+exam> db.createCollection("mon")
+{ ok: 1 }
+exam> show dbs
+Naruto    8.00 KiB
+SIWS     24.00 KiB
+admin    40.00 KiB
+config   72.00 KiB
+exam      8.00 KiB
+local    88.00 KiB
+test    128.00 KiB
+tyit     96.00 KiB
+exam> hi
+ReferenceError: hi is not defined
+exam> show collections
+mon
+exam> db.mon.drop()
+true
+exam> show collections
+
+exam> db.createCollection("mong")
+{ ok: 1 }
+exam> db.mongo.insertOne({"name":"atharva","age":20})
+{
+  acknowledged: true,
+  insertedId: ObjectId('671864f7f30e6a60ecc73bf8')
+}
+exam> db.mongo.insertOne({"name":"dev","age":20})
+{
+  acknowledged: true,
+  insertedId: ObjectId('67186504f30e6a60ecc73bf9')
+}
+exam> db.mongo.find()
+[
+  {
+    _id: ObjectId('671864f7f30e6a60ecc73bf8'),
+    name: 'atharva',
+    age: 20
+  },
+  { _id: ObjectId('67186504f30e6a60ecc73bf9'), name: 'dev', age: 20 }
+]
+exam> db.mongo.deleteOne("name":"dev")
+Uncaught:
+SyntaxError: Unexpected token, expected "," (1:25)
+
+> 1 | db.mongo.deleteOne("name":"dev")
+    |                          ^
+  2 |
+
+exam> db.mongo.deleteOne({"name":"dev"})
+{ acknowledged: true, deletedCount: 1 }
+exam> db.mongo.find()
+[
+  {
+    _id: ObjectId('671864f7f30e6a60ecc73bf8'),
+    name: 'atharva',
+    age: 20
+  }
+]
+exam> db.mongo.updateOne({"name":"dev"<Doctype html>})
+Uncaught:
+SyntaxError: Unexpected token, expected "," (1:41)
+
+> 1 | db.mongo.updateOne({"name":"dev"<Doctype html>})
+    |                                          ^
+  2 |
+
+exam> <html>
+Uncaught:
+SyntaxError: Support for the experimental syntax 'jsx' isn't currently enabled (1:1):
+
+> 1 | <html>
+    | ^
+  2 |
+
+Add @babel/preset-react (https://github.com/babel/babel/tree/main/packages/babel-preset-react) to the 'presets' section of your Babel config to enable transformation.
+If you want to leave it as-is, add @babel/plugin-syntax-jsx (https://github.com/babel/babel/tree/main/packages/babel-plugin-syntax-jsx) to the 'plugins' section to enable parsing.
+
+exam> <head>
+Uncaught:
+SyntaxError: Support for the experimental syntax 'jsx' isn't currently enabled (1:1):
+
+> 1 | <head>
+    | ^
+  2 |
+
+Add @babel/preset-react (https://github.com/babel/babel/tree/main/packages/babel-preset-react) to the 'presets' section of your Babel config to enable transformation.
+If you want to leave it as-is, add @babel/plugin-syntax-jsx (https://github.com/babel/babel/tree/main/packages/babel-plugin-syntax-jsx) to the 'plugins' section to enable parsing.
+
+exam> <title></title>
+Uncaught:
+SyntaxError: Support for the experimental syntax 'jsx' isn't currently enabled (1:1):
+
+> 1 | <title></title>
+    | ^
+  2 |
+
+Add @babel/preset-react (https://github.com/babel/babel/tree/main/packages/babel-preset-react) to the 'presets' section of your Babel config to enable transformation.
+If you want to leave it as-is, add @babel/plugin-syntax-jsx (https://github.com/babel/babel/tree/main/packages/babel-plugin-syntax-jsx) to the 'plugins' section to enable parsing.
+
+exam> <script src="https://ajax.google.com/apis/libs/jquery/3.7.1/jquery.main.js"></script>
+Uncaught:
+SyntaxError: Support for the experimental syntax 'jsx' isn't currently enabled (1:1):
+
+> 1 | <script src="https://ajax.google.com/apis/libs/jquery/3.7.1/jquery.main.js"></script>
+    | ^
+  2 |
+
+Add @babel/preset-react (https://github.com/babel/babel/tree/main/packages/babel-preset-react) to the 'presets' section of your Babel config to enable transformation.
+If you want to leave it as-is, add @babel/plugin-syntax-jsx (https://github.com/babel/babel/tree/main/packages/babel-plugin-syntax-jsx) to the 'plugins' section to enable parsing.
+
+exam> <script>
+Uncaught:
+SyntaxError: Support for the experimental syntax 'jsx' isn't currently enabled (1:1):
+
+> 1 | <script>
+    | ^
+  2 |
+
+Add @babel/preset-react (https://github.com/babel/babel/tree/main/packages/babel-preset-react) to the 'presets' section of your Babel config to enable transformation.
+If you want to leave it as-is, add @babel/plugin-syntax-jsx (https://github.com/babel/babel/tree/main/packages/babel-plugin-syntax-jsx) to the 'plugins' section to enable parsing.
+
+exam>
+
+exam> </script>
+Uncaught:
+SyntaxError: Unexpected token (1:0)
+
+> 1 | </script>
+    | ^
+  2 |
+
+exam> </head>
+Uncaught:
+SyntaxError: Unexpected token (1:0)
+
+> 1 | </head>
+    | ^
+  2 |
+
+exam> <body>
+Uncaught:
+SyntaxError: Support for the experimental syntax 'jsx' isn't currently enabled (1:1):
+
+> 1 | <body>
+    | ^
+  2 |
+
+Add @babel/preset-react (https://github.com/babel/babel/tree/main/packages/babel-preset-react) to the 'presets' section of your Babel config to enable transformation.
+If you want to leave it as-is, add @babel/plugin-syntax-jsx (https://github.com/babel/babel/tree/main/packages/babel-plugin-syntax-jsx) to the 'plugins' section to enable parsing.
+
+exam> <p id="test">jquery basic</p>
+Uncaught:
+SyntaxError: Support for the experimental syntax 'jsx' isn't currently enabled (1:1):
+
+> 1 | <p id="test">jquery basic</p>
+    | ^
+  2 |
+
+Add @babel/preset-react (https://github.com/babel/babel/tree/main/packages/babel-preset-react) to the 'presets' section of your Babel config to enable transformation.
+If you want to leave it as-is, add @babel/plugin-syntax-jsx (https://github.com/babel/babel/tree/main/packages/babel-plugin-syntax-jsx) to the 'plugins' section to enable parsing.
+
+exam> </body>
+Uncaught:
+SyntaxError: Unexpected token (1:0)
+
+> 1 | </body>
+    | ^
+  2 |
+
+exam> </html><Doctype html>
+Uncaught:
+SyntaxError: Unexpected token (1:0)
+
+> 1 | </html><Doctype html>
+    | ^
+  2 |
+
+exam> <html>
+Uncaught:
+SyntaxError: Support for the experimental syntax 'jsx' isn't currently enabled (1:1):
+
+> 1 | <html>
+    | ^
+  2 |
+
+Add @babel/preset-react (https://github.com/babel/babel/tree/main/packages/babel-preset-react) to the 'presets' section of your Babel config to enable transformation.
+If you want to leave it as-is, add @babel/plugin-syntax-jsx (https://github.com/babel/babel/tree/main/packages/babel-plugin-syntax-jsx) to the 'plugins' section to enable parsing.
+
+exam> <head>
+Uncaught:
+SyntaxError: Support for the experimental syntax 'jsx' isn't currently enabled (1:1):
+
+> 1 | <head>
+    | ^
+  2 |
+
+Add @babel/preset-react (https://github.com/babel/babel/tree/main/packages/babel-preset-react) to the 'presets' section of your Babel config to enable transformation.
+If you want to leave it as-is, add @babel/plugin-syntax-jsx (https://github.com/babel/babel/tree/main/packages/babel-plugin-syntax-jsx) to the 'plugins' section to enable parsing.
+
+exam> <title></title>
+Uncaught:
+SyntaxError: Support for the experimental syntax 'jsx' isn't currently enabled (1:1):
+
+> 1 | <title></title>
+    | ^
+  2 |
+
+Add @babel/preset-react (https://github.com/babel/babel/tree/main/packages/babel-preset-react) to the 'presets' section of your Babel config to enable transformation.
+If you want to leave it as-is, add @babel/plugin-syntax-jsx (https://github.com/babel/babel/tree/main/packages/babel-plugin-syntax-jsx) to the 'plugins' section to enable parsing.
+
+exam> <script src="https://ajax.google.com/apis/libs/jquery/3.7.1/jquery.main.js"></script>
+Uncaught:
+SyntaxError: Support for the experimental syntax 'jsx' isn't currently enabled (1:1):
+
+> 1 | <script src="https://ajax.google.com/apis/libs/jquery/3.7.1/jquery.main.js"></script>
+    | ^
+  2 |
+
+Add @babel/preset-react (https://github.com/babel/babel/tree/main/packages/babel-preset-react) to the 'presets' section of your Babel config to enable transformation.
+If you want to leave it as-is, add @babel/plugin-syntax-jsx (https://github.com/babel/babel/tree/main/packages/babel-plugin-syntax-jsx) to the 'plugins' section to enable parsing.
+
+exam> <script>
+Uncaught:
+SyntaxError: Support for the experimental syntax 'jsx' isn't currently enabled (1:1):
+
+> 1 | <script>
+    | ^
+  2 |
+
+Add @babel/preset-react (https://github.com/babel/babel/tree/main/packages/babel-preset-react) to the 'presets' section of your Babel config to enable transformation.
+If you want to leave it as-is, add @babel/plugin-syntax-jsx (https://github.com/babel/babel/tree/main/packages/babel-plugin-syntax-jsx) to the 'plugins' section to enable parsing.
+
+exam>
+
+exam> </script>
+Uncaught:
+SyntaxError: Unexpected token (1:0)
+
+> 1 | </script>
+    | ^
+  2 |
+
+exam> </head>
+Uncaught:
+SyntaxError: Unexpected token (1:0)
+
+> 1 | </head>
+    | ^
+  2 |
+
+exam> <body>
+Uncaught:
+SyntaxError: Support for the experimental syntax 'jsx' isn't currently enabled (1:1):
+
+> 1 | <body>
+    | ^
+  2 |
+
+Add @babel/preset-react (https://github.com/babel/babel/tree/main/packages/babel-preset-react) to the 'presets' section of your Babel config to enable transformation.
+If you want to leave it as-is, add @babel/plugin-syntax-jsx (https://github.com/babel/babel/tree/main/packages/babel-plugin-syntax-jsx) to the 'plugins' section to enable parsing.
+
+exam> <p id="test">jquery basic</p>
+Uncaught:
+SyntaxError: Support for the experimental syntax 'jsx' isn't currently enabled (1:1):
+
+> 1 | <p id="test">jquery basic</p>
+    | ^
+  2 |
+
+Add @babel/preset-react (https://github.com/babel/babel/tree/main/packages/babel-preset-react) to the 'presets' section of your Babel config to enable transformation.
+If you want to leave it as-is, add @babel/plugin-syntax-jsx (https://github.com/babel/babel/tree/main/packages/babel-plugin-syntax-jsx) to the 'plugins' section to enable parsing.
+
+exam> </body>
+Uncaught:
+SyntaxError: Unexpected token (1:0)
+
+> 1 | </body>
+    | ^
+  2 |
+
+exam> db.mongo.updateOne({"name":"dev"})
+MongoInvalidArgumentError: Update document requires atomic operators
+exam> db.mongo.updateOne({"name":"atharva"},"$set"{"age":21})
+Uncaught:
+SyntaxError: Unexpected token, expected "," (1:44)
+
+> 1 | db.mongo.updateOne({"name":"atharva"},"$set"{"age":21})
+    |                                             ^
+  2 |
+
+exam> db.mongo.updateOne({"name":"atharva"},"$set"{"age":21})
+Uncaught:
+SyntaxError: Unexpected token, expected "," (1:44)
+
+> 1 | db.mongo.updateOne({"name":"atharva"},"$set"{"age":21})
+    |                                             ^
+  2 |
+
+exam> db.mongo.updateOne({"name":"atharva"},{"$set"{"age":21}})
+Uncaught:
+SyntaxError: Unexpected token (1:45)
+
+> 1 | db.mongo.updateOne({"name":"atharva"},{"$set"{"age":21}})
+    |                                              ^
+  2 |
+
+exam> db.mongo.updateOne({"name":"atharva"},{"$set":{"age":21}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+exam> user={"name":"dev","age":20};
+{ name: 'dev', age: 20 }
+exam> user0={"name":"adev","age":20};
+{ name: 'adev', age: 20 }
+exam> db.mongo.insertMany([user][user0])
+MongoshInvalidInputError: [COMMON-10001] Missing required argument at position 0 (Collection.insertMany)
+exam> db.mongo.insertMany([user,user0])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('67186c8af30e6a60ecc73bfa'),
+    '1': ObjectId('67186c8af30e6a60ecc73bfb')
+  }
+}
+exam> db.mongo.deleteMany([user,user0])
+MongoServerError[TypeMismatch]: BSON field 'delete.deletes.q' is the wrong type 'array', expected type 'object'
+exam> db.mongo.updateMany({},{"$set":{"class":"tyit"}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 3,
+  modifiedCount: 3,
+  upsertedCount: 0
+}
+exam> db.mongo.find()
+[
+  {
+    _id: ObjectId('671864f7f30e6a60ecc73bf8'),
+    name: 'atharva',
+    age: 21,
+    class: 'tyit'
+  },
+  {
+    _id: ObjectId('67186c8af30e6a60ecc73bfa'),
+    name: 'dev',
+    age: 20,
+    class: 'tyit'
+  },
+  {
+    _id: ObjectId('67186c8af30e6a60ecc73bfb'),
+    name: 'adev',
+    age: 20,
+    class: 'tyit'
+  }
+]
+exam> db.mongo.findOne()
+{
+  _id: ObjectId('671864f7f30e6a60ecc73bf8'),
+  name: 'atharva',
+  age: 21,
+  class: 'tyit'
+}
+exam> db.mongo.find().sort({"age":1})
+[
+  {
+    _id: ObjectId('67186c8af30e6a60ecc73bfa'),
+    name: 'dev',
+    age: 20,
+    class: 'tyit'
+  },
+  {
+    _id: ObjectId('67186c8af30e6a60ecc73bfb'),
+    name: 'adev',
+    age: 20,
+    class: 'tyit'
+  },
+  {
+    _id: ObjectId('671864f7f30e6a60ecc73bf8'),
+    name: 'atharva',
+    age: 21,
+    class: 'tyit'
+  }
+]
+exam> db.mongo.find().limit(1)
+[
+  {
+    _id: ObjectId('671864f7f30e6a60ecc73bf8'),
+    name: 'atharva',
+    age: 21,
+    class: 'tyit'
+  }
+]
+exam> db.mongo.find().skip(1)
+[
+  {
+    _id: ObjectId('67186c8af30e6a60ecc73bfa'),
+    name: 'dev',
+    age: 20,
+    class: 'tyit'
+  },
+  {
+    _id: ObjectId('67186c8af30e6a60ecc73bfb'),
+    name: 'adev',
+    age: 20,
+    class: 'tyit'
+  }
+]
+exam> db.mongo.aggregate([$group:{class:"tyit",Total:{$sum:1}}])
+Uncaught:
+SyntaxError: Unexpected token, expected "," (1:26)
+
+> 1 | db.mongo.aggregate([$group:{class:"tyit",Total:{$sum:1}}])
+    |                           ^
+  2 |
+
+exam> db.mongo.aggregate([$group:{_id:"tyit",Total:{$sum:1}}])
+Uncaught:
+SyntaxError: Unexpected token, expected "," (1:26)
+
+> 1 | db.mongo.aggregate([$group:{_id:"tyit",Total:{$sum:1}}])
+    |                           ^
+  2 |
+
+exam> db.mongo.aggregate([{$group:{_id:"tyit",Total:{$sum:1}}}])
+[ { _id: 'tyit', Total: 3 } ]
+exam> db.mongo.aggregate([{$group:{_id:"tyit",Max:{$max:1}}}])
+[ { _id: 'tyit', Max: 1 } ]
+exam> db.mongo.aggregate([{$group:{_id:"tyit",Max:{$max:"$age"}}}])
+[ { _id: 'tyit', Max: 21 } ]
+exam> db.mongo.aggregate([{$group:{_id:"tyit",Min:{$min:"$age"}}}])
+[ { _id: 'tyit', Min: 20 } ]
+exam> db.mongo.aggregate([{$group:{_id:"tyit",Avarage:{$avg:"$age"}}}])
+[ { _id: 'tyit', Avarage: 20.333333333333332 } ]
+exam> db.mongo.updateOne({name:"atharva"},{"$push":{"hobbies":"chess"}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+exam> db.mongo.updateOne({name:"atharva"},{"$addToSet":{"skill":"python"}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+exam> db.mongo.find()
+[
+  {
+    _id: ObjectId('671864f7f30e6a60ecc73bf8'),
+    name: 'atharva',
+    age: 21,
+    class: 'tyit',
+    hobbies: [ 'chess' ],
+    skill: [ 'python' ]
+  },
+  {
+    _id: ObjectId('67186c8af30e6a60ecc73bfa'),
+    name: 'dev',
+    age: 20,
+    class: 'tyit'
+  },
+  {
+    _id: ObjectId('67186c8af30e6a60ecc73bfb'),
+    name: 'adev',
+    age: 20,
+    class: 'tyit'
+  }
+]
+exam> for(int i;i<10;i++)db.mongo.insert({"name":"person"+1,"age":i})
+Uncaught:
+SyntaxError: Missing semicolon. (1:7)
+
+> 1 | for(int i;i<10;i++)db.mongo.insert({"name":"person"+1,"age":i})
+    |        ^
+  2 |
+
+exam> for(int i=0;i<10;i++)db.mongo.insert({"name":"person"+1,"age":i})
+Uncaught:
+SyntaxError: Missing semicolon. (1:7)
+
+> 1 | for(int i=0;i<10;i++)db.mongo.insert({"name":"person"+1,"age":i})
+    |        ^
+  2 |
+
+exam> for(int i=0;i<10;i++){db.mongo.insert({"name":"person"+1,"age":i})}
+Uncaught:
+SyntaxError: Missing semicolon. (1:7)
+
+> 1 | for(int i=0;i<10;i++){db.mongo.insert({"name":"person"+1,"age":i})}
+    |        ^
+  2 |
+
+exam> for(var i=0;i<10;i++){db.mongo.insert({"name":"person"+i,"age":i})}
+DeprecationWarning: Collection.insert() is deprecated. Use insertOne, insertMany, or bulkWrite.
+{
+  acknowledged: true,
+  insertedIds: { '0': ObjectId('67187fb3f30e6a60ecc73c05') }
+}
+exam> db.mongo.find()
+[
+  {
+    _id: ObjectId('671864f7f30e6a60ecc73bf8'),
+    name: 'atharva',
+    age: 21,
+    class: 'tyit',
+    hobbies: [ 'chess' ],
+    skill: [ 'python' ]
+  },
+  {
+    _id: ObjectId('67186c8af30e6a60ecc73bfa'),
+    name: 'dev',
+    age: 20,
+    class: 'tyit'
+  },
+  {
+    _id: ObjectId('67186c8af30e6a60ecc73bfb'),
+    name: 'adev',
+    age: 20,
+    class: 'tyit'
+  },
+  {
+    _id: ObjectId('67187fb3f30e6a60ecc73bfc'),
+    name: 'person0',
+    age: 0
+  },
+  {
+    _id: ObjectId('67187fb3f30e6a60ecc73bfd'),
+    name: 'person1',
+    age: 1
+  },
+  {
+    _id: ObjectId('67187fb3f30e6a60ecc73bfe'),
+    name: 'person2',
+    age: 2
+  },
+  {
+    _id: ObjectId('67187fb3f30e6a60ecc73bff'),
+    name: 'person3',
+    age: 3
+  },
+  {
+    _id: ObjectId('67187fb3f30e6a60ecc73c00'),
+    name: 'person4',
+    age: 4
+  },
+  {
+    _id: ObjectId('67187fb3f30e6a60ecc73c01'),
+    name: 'person5',
+    age: 5
+  },
+  {
+    _id: ObjectId('67187fb3f30e6a60ecc73c02'),
+    name: 'person6',
+    age: 6
+  },
+  {
+    _id: ObjectId('67187fb3f30e6a60ecc73c03'),
+    name: 'person7',
+    age: 7
+  },
+  {
+    _id: ObjectId('67187fb3f30e6a60ecc73c04'),
+    name: 'person8',
+    age: 8
+  },
+  {
+    _id: ObjectId('67187fb3f30e6a60ecc73c05'),
+    name: 'person9',
+    age: 9
+  }
+]
+exam> db.mongo.aggregate({$group:{_id:"age",name{$name:"name"}}})
+Uncaught:
+SyntaxError: Unexpected token, expected "," (1:42)
+
+> 1 | db.mongo.aggregate({$group:{_id:"age",name{$name:"name"}}})
+    |                                           ^
+  2 |
+
+exam> db.mongo.aggregate({$group:{_id:"age",name:{$name:"name"}}})
+MongoServerError[Location15952]: unknown group operator '$name'
+exam> db.mongo.aggregate({$group:{_id:"age",name:{$first:"name"}}})
+[ { _id: 'age', name: 'name' } ]
+exam> db.mongo.aggregate({$group:{_id:"$age",name:{$first:"$name"}}})
+[
+  { _id: 21, name: 'atharva' },
+  { _id: 3, name: 'person3' },
+  { _id: 2, name: 'person2' },
+  { _id: 9, name: 'person9' },
+  { _id: 4, name: 'person4' },
+  { _id: 5, name: 'person5' },
+  { _id: 0, name: 'person0' },
+  { _id: 8, name: 'person8' },
+  { _id: 20, name: 'dev' },
+  { _id: 1, name: 'person1' },
+  { _id: 6, name: 'person6' },
+  { _id: 7, name: 'person7' }
+]
+exam> db.mongo.aggregate({$group:{_id:"$age",name:{$last:"$name"}}})
+[
+  { _id: 21, name: 'atharva' },
+  { _id: 3, name: 'person3' },
+  { _id: 2, name: 'person2' },
+  { _id: 9, name: 'person9' },
+  { _id: 4, name: 'person4' },
+  { _id: 5, name: 'person5' },
+  { _id: 0, name: 'person0' },
+  { _id: 8, name: 'person8' },
+  { _id: 20, name: 'adev' },
+  { _id: 1, name: 'person1' },
+  { _id: 6, name: 'person6' },
+  { _id: 7, name: 'person7' }
+]
+exam>
