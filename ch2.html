@@ -321,15 +321,35 @@
                 q30: 'c',
 		q31: 'd'
             };
-            let totalQuestions = Object.keys(answers).length;
-            for (let key in answers) {
-                let selectedOption = document.querySelector(`input[name="${key}"]:checked`);
-                if (selectedOption && selectedOption.value === answers[key]) {
+let totalQuestions = Object.keys(answers).length;
+
+        // Remove previous feedback if any
+        document.querySelectorAll('.feedback').forEach(el => el.remove());
+
+        for (let key in answers) {
+            let selectedOption = document.querySelector(`input[name="${key}"]:checked`);
+            let questionDiv = document.querySelector(`input[name="${key}"]`).closest('.question');
+
+            let feedback = document.createElement('div');
+            feedback.className = 'feedback';
+            feedback.style.marginTop = '5px';
+
+            if (selectedOption) {
+                if (selectedOption.value === answers[key]) {
                     score++;
+                    feedback.innerHTML = `<span style="color: green;">✔️ Correct</span>`;
+                } else {
+                    feedback.innerHTML = `<span style="color: red;">❌ Incorrect. Correct answer is: <strong>${answers[key]}</strong></span>`;
                 }
+            } else {
+                feedback.innerHTML = `<span style="color: red;">❌ No answer selected. Correct answer is: <strong>${answers[key]}</strong></span>`;
             }
-            document.getElementById("result").innerText = `You scored ${score} out of ${totalQuestions}`;
+
+            questionDiv.appendChild(feedback);
         }
+
+        document.getElementById("result").innerText = `You scored ${score} out of ${totalQuestions}`;
+    }
     </script>
 </body>
 </html>
